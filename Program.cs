@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Fibonacci
 {
@@ -13,9 +13,9 @@ namespace Fibonacci
             while (!terminar)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write("\nQuantos termos da sequência de Fibonacci você deseja ver? ");
+                Console.Write("\nQuantos termos da sequência de Fibonacci você deseja ver? (>=2)\t");
                 bool nbool = Int32.TryParse(Console.ReadLine(), out N);
-                if (!nbool)
+                if (!nbool || N < 2)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Valor inválido, pressione uma tecla para inserir outro valor.");
